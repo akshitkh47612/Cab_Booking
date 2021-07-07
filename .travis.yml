@@ -1,0 +1,12 @@
+language: java
+jdk: openjdk12
+os:
+  - linux
+
+env:
+  matrix:
+    - TARGET="clean verify"
+    - TARGET="checkstyle:check --batch-mode"
+
+script:
+  mvn $TARGET
